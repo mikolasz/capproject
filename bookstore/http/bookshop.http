@@ -1,0 +1,27 @@
+curl -X POST http://localhost:8080/odata/v4/OrdersService/Orders \ 
+-H "Content-Type: application/json" \
+ -d '{"ID": "50425a69-48b9-45f1-b6d2-687d55355e03", "currency_code": "USD"}' 
+
+###
+
+curl -X POST http://localhost:8080/odata/v4/OrdersService/OrderItems \
+-H "Content-Type: application/json" \
+-d '{"parent_ID": "50425a69-48b9-45f1-b6d2-687d55355e03", "book_ID": "abed2f7a-c50e-4bc5-89fd-9a00a54b4b16", "amount": 2}' 
+
+###
+
+curl -X POST http://localhost:8080/odata/v4/OrdersService/Orders \
+-H "Content-Type: application/json" \
+-d '{"ID": "017f4ac4-7f07-4c07-a009-3168317a10cf", "currency_code": "USD"}' 
+
+###
+
+curl -X POST http://localhost:8080/odata/v4/OrdersService/OrderItems \
+-H "Content-Type: application/json" \
+-d '{"parent_ID": "017f4ac4-7f07-4c07-a009-3168317a10cf", "book_ID": "fd0c5fda-8811-4e20-bcff-3a776abc290a", "amount": 4}' 
+
+###
+
+curl -X POST http://localhost:8080/odata/v4/OrdersService/Orders \
+-H "Content-Type: application/json" \
+-d '{ "currency_code": "USD", "items": [ { "book_ID": "b7bca6dd-0497-465e-9a5a-56f244174c8c", "amount": 1 } ] }' 

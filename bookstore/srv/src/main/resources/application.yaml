@@ -1,0 +1,7 @@
+---
+spring:
+  profiles: default
+  datasource:
+    url: "jdbc:sqlite:/Users/i310858/Dev/VS_Code_workspace/bookstore/sqlite.db"
+    driver-class-name: org.sqlite.JDBC
+    initialization-mode: never

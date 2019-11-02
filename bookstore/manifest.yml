@@ -1,0 +1,7 @@
+---
+applications:
+- name: bookstore-i310858
+  path: srv/target/bookstore-1.0-SNAPSHOT.jar
+  random-route: true
+  services:
+  - bookstore-hana-i310858
