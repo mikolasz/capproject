@@ -1,0 +1,38 @@
+{
+    "sap.app": {
+        "id": "suppliers",
+        "title": "Books",
+        "dataSources": {
+            "BooksService": {
+                "uri": "/odata/v4/OrdersService/",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui5": {
+        "dependencies": { "libs": { "sap.fe": {} } },
+        "models": {
+            "": {
+                "dataSource": "BooksService",
+                "settings": { "synchronizationMode": "None" }
+            }
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "BooksList",
+                    "target": "BooksList"
+                }
+            ],
+            "targets": {
+                "BooksList": {
+                    "entitySet": "Books",
+                    "viewName": "sap.fe.templates.ListReport"
+                }
+            }
+        }
+    }
+}
