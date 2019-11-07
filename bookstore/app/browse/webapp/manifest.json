@@ -1,6 +1,6 @@
 {
     "sap.app": {
-        "id": "suppliers",
+        "id": "bookshop",
         "title": "Books",
         "dataSources": {
             "BooksService": {

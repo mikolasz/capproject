@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
-
 <head>
     <title>Bookstore</title>
 
     <script>
         window['sap-ushell-config'] = {
+            defaultRenderer: "fiori2",
             applications: {
                 'bookstore': {
                     title: 'Bookstore',
@@ -19,12 +20,15 @@
 
     <script id="sap-ui-bootstrap" 
         src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout"
         data-sap-ui-compatVersion="edge" 
-        data-sap-ui-theme="sap_belize"></script>
+        data-sap-ui-theme="sap_belize"
+        data-sap-ui-frameOptions="allow"
+    ></script>
     
     <script>
         sap.ui.getCore().attachInit(function () {
-            sap.ushell.Container.createRenderer('fiori2').placeAt('content')
+            sap.ushell.Container.createRenderer().placeAt('content')
         })
     </script>
 
